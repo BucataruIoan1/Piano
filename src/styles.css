@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piano {
+    height: 50%;
+    width: 70%;
+    background-color: #222222;
+}
+
+.piano-keyboards {
+    height: 65%;
+    margin: 10% 5% 0;
+    background-color: whitesmoke;
+    display: flex;
+}
+
+.keyboard-group {
+    display: flex;
+    flex: 1;
+    text-align: center;
+}
+
+.main-keyboard {
+    background-color: white;
+    border: 3px solid black;
+    height: 100%;
+    width: 100%;
+}
+
+#secondary-keyboard {
+    height: 50%;
+    width: 45%;
+    background-color: black;
+    position: relative;
+    left: 65px;
+}
+
+.none {
+    display: none;
+}
