@@ -1,21 +1,20 @@
-import { Keyboard } from './MainKeyboard'
+import { Keyboard } from './Keys'
+import { keys } from './data';
 import nextId from "react-id-generator"
 
 export const Piano = () => {
-  let mainKeyboardsArray = [];
+  let keyboardsArray = [];
   for(let i = 0; i < 14; i++) {
-    mainKeyboardsArray.push(<Keyboard />)
+    keyboardsArray.push(<Keyboard />)
   }
 
   return (
-    <div className='main-page'>
-        <div className='piano'>
-            <div className='piano-keyboards'>
-                {mainKeyboardsArray.map((mainKeyboard, index) =>
-                  <Keyboard key={nextId()} className={index}/>
-                )}
-            </div>
-        </div>
+    <div className='piano'>
+      <div className='piano-keys'>
+        {keys.map((keyboard, index) => {
+          return <Keyboard key={nextId()} letter={keyboard} classValue={index}/>
+        })}
+      </div>
     </div>
   )
 }
